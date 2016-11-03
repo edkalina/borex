@@ -1,0 +1,40 @@
+{
+  "name": "borex-dev",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Denis Nevmerzhitskii <kastigarster@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kastigar/borex.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kastigar/borex/issues"
+  },
+  "homepage": "https://github.com/kastigar/borex#readme",
+  "scripts": {
+    "lint": "eslint ./packages/*/src",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.2",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^6.1.2",
+    "babel-jest": "^16.0.0",
+    "babel-plugin-syntax-export-extensions": "^6.13.0",
+    "babel-plugin-syntax-trailing-function-commas": "^6.13.0",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-preset-es2015": "^6.14.0",
+    "eslint": "^3.5.0",
+    "eslint-config-airbnb": "^11.0.0",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^6.2.0",
+    "flux-standard-action": "^1.0.0",
+    "jest": "^16.0.2",
+    "lerna": "2.0.0-beta.30"
+  }
+}

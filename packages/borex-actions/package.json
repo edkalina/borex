@@ -1,0 +1,26 @@
+{
+  "name": "borex-actions",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Denis Nevmerzhitskii <kastigarster@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kastigar/borex.git"
+  },
+  "keywords": [
+    "borex",
+    "redux",
+    "reducer",
+    "action-creator",
+    "functional"
+  ],
+  "bugs": {
+    "url": "https://github.com/kastigar/borex/issues"
+  },
+  "homepage": "https://github.com/kastigar/borex#readme",
+  "dependencies": {
+    "borex-action-enhancer-helpers": "^0.0.1",
+    "borex-reducer-in-helpers": "^0.0.1"
+  }
+}

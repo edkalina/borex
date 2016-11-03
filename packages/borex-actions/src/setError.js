@@ -1,0 +1,7 @@
+import actionTemplateEnhancer from 'borex-action-enhancer-helpers/actionTemplateEnhancer';
+
+
+export default actionTemplateEnhancer((actionTpl) => {
+  // eslint-disable-next-line no-param-reassign
+  actionTpl.error = true;
+});
