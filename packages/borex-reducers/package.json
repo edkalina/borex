@@ -1,6 +1,6 @@
 {
   "name": "borex-reducers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "author": "Denis Nevmerzhitskii <kastigarster@gmail.com>",
   "license": "MIT",
@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/kastigar/borex#readme",
   "dependencies": {
-    "borex-reducer-in-helpers": "^0.0.1"
+    "borex-reducer-in-helpers": "^0.0.2"
   }
 }
