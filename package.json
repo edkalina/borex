@@ -16,7 +16,8 @@
     "lint": "eslint ./packages/*/src",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "build": "lerna exec -- node ../../scripts/build_package.js"
+    "build": "lerna exec -- node ../../scripts/build_package.js",
+    "clean": "lerna exec -- node ../../scripts/clean_package.js"
   },
   "devDependencies": {
     "babel-cli": "^6.5.2",
