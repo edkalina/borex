@@ -26,11 +26,11 @@ function buildJs(file) {
   process.stdout.write(`${packageName}: ${relativeFilePath}\n`);
 }
 
-function buildPacakge() {
+function buildPackage() {
   const jsFilesPattern = path.resolve(srcDir, '**/*.js');
   const jsFiles = glob.sync(jsFilesPattern, { nodir: true });
 
   jsFiles.forEach(file => buildJs(file));
 }
 
-buildPacakge();
+buildPackage();
