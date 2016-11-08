@@ -5,10 +5,13 @@ export default function sideEffectProcessor(options = {}) {
 
     return next => action => {
       const sideEffects = action.meta && action.meta.sideEffects;
+      const sideEffectsOnly = action.meta && action.meta.sideEffectsOnly;
 
-      next(action);
+      if (!sideEffectsOnly) {
+        next(action);
+      }
 
-      if (sideEffects) {
+      if (sideEffects && sideEffects.length > 0) {
         const creatorArgs = action.meta.creatorArgs || [];
 
         sideEffects.forEach(sideEffect => sideEffect(context, ...creatorArgs));
