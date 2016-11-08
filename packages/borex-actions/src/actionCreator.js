@@ -1,7 +1,4 @@
-import {
-  EnhancerType, ActionTemplateEnhancer, ActionEnhancer,
-} from 'borex-action-enhancer-helpers/symbols';
-
+import isFunction from 'lodash/isFunction';
 
 let actionIndex = 0;
 
@@ -22,14 +19,10 @@ export default function actionCreator(...declareArgs) {
   };
 
   const actionEnhancers = enhancers && enhancers.reduce((memo, enhancer) => {
-    if (enhancer[EnhancerType] === ActionTemplateEnhancer) {
-      // execute it immediately
-      enhancer(actionTemplate);
-    } else if (enhancer[EnhancerType] === ActionEnhancer) {
-      // store this enhancer
-      memo.push(enhancer);
-    } else {
-      throw new Error('Unknown enhancer type');
+    const result = enhancer(actionTemplate);
+
+    if (isFunction(result)) {
+      memo.push(result);
     }
 
     return memo;

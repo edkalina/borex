@@ -20,7 +20,6 @@
   },
   "homepage": "https://github.com/kastigar/borex#readme",
   "dependencies": {
-    "borex-action-enhancer-helpers": "^0.0.2",
-    "borex-reducer-in-helpers": "^0.0.2"
+    "lodash": "^4.16.6"
   }
 }

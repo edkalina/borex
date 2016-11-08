@@ -1,4 +1,4 @@
-import inReducerWrapper from 'borex-reducer-in-helpers/inReducerWrapper';
+import inReducerWrapper from './utils/inReducerWrapper';
 import withReducer from './withReducer';
 
 

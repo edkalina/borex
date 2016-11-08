@@ -1,15 +1,12 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-env jest */
-import { EnhancerType, ActionTemplateEnhancer } from 'borex-action-enhancer-helpers/symbols';
 import withReducer from '../withReducer';
 
 
 describe('`withReducer`', () => {
   it('should return ActionTemplateEnhancer', () => {
     const enhancer = withReducer(() => {});
-
     expect(enhancer).toBeInstanceOf(Function);
-    expect(enhancer[EnhancerType]).toBe(ActionTemplateEnhancer);
   });
 
   it('should compose all reducers', () => {
