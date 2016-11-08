@@ -1,4 +1,4 @@
-import inCreatorWrapper from 'borex-reducer-in-helpers/inCreatorWrapper';
+import inCreatorWrapper from './utils/inCreatorWrapper';
 import update from './update';
 
 

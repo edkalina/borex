@@ -1,6 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-env jest */
-import { EnhancerType, ActionEnhancer } from 'borex-action-enhancer-helpers/symbols';
 import setMeta from '../setMeta';
 
 
@@ -11,13 +10,14 @@ const TestValueGetter = () => TestValue;
 describe('`setMeta`', () => {
   it('should return ActionEnhancer', () => {
     const enhancer = setMeta(TestField, TestValueGetter);
-
     expect(enhancer).toBeInstanceOf(Function);
-    expect(enhancer[EnhancerType]).toBe(ActionEnhancer);
+
+    const enhancerFn = enhancer();
+    expect(enhancerFn).toBeInstanceOf(Function);
   });
 
   it('should set specified field in `meta`', () => {
-    const enhancer = setMeta(TestField, TestValueGetter);
+    const enhancer = setMeta(TestField, TestValueGetter)();
     const action = { meta: {} };
 
     enhancer(action);
@@ -27,7 +27,7 @@ describe('`setMeta`', () => {
 
   it('should call getter with arguments', () => {
     const valueGetter = jest.fn(TestValueGetter);
-    const enhancer = setMeta(TestField, valueGetter);
+    const enhancer = setMeta(TestField, valueGetter)();
     const action = { meta: {} };
 
     enhancer(action, 'arg1', 'arg2');
