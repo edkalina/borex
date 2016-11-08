@@ -1,15 +1,12 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-env jest */
-import { EnhancerType, ActionTemplateEnhancer } from 'borex-action-enhancer-helpers/symbols';
 import withSideEffect from '../withSideEffect';
 
 
 describe('`withSideEffect`', () => {
   it('should return ActionTemplateEnhancer', () => {
     const enhancer = withSideEffect(() => {});
-
     expect(enhancer).toBeInstanceOf(Function);
-    expect(enhancer[EnhancerType]).toBe(ActionTemplateEnhancer);
   });
 
   it('should add all side effects into `meta.sideEffects`', () => {

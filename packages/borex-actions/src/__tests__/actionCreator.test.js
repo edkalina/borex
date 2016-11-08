@@ -2,16 +2,19 @@
 /* eslint-env jest */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { isFSA } from 'flux-standard-action';
-import {
-  EnhancerType, ActionEnhancer, ActionTemplateEnhancer,
-} from 'borex-action-enhancer-helpers/symbols';
 
 import actionCreator from '../actionCreator';
 
 
-function createEnhancer(type) {
-  const enhancer = jest.fn();
-  enhancer[EnhancerType] = type;
+function createTemplateEnhancer() {
+  return jest.fn();
+}
+
+function createEnhancer() {
+  const enhancerFn = jest.fn();
+  const enhancer = jest.fn(() => enhancerFn);
+
+  enhancer.fn = enhancerFn;
 
   return enhancer;
 }
@@ -33,30 +36,24 @@ describe('`actionCreator`', () => {
   });
 
   it('should call enhancers on time', () => {
-    const templateEnhancer = createEnhancer(ActionTemplateEnhancer);
-    const actionEnhancer = createEnhancer(ActionEnhancer);
+    const templateEnhancer = createTemplateEnhancer();
+    const actionEnhancer = createEnhancer();
 
     const creator = actionCreator(templateEnhancer, actionEnhancer);
 
     expect(templateEnhancer).toHaveBeenCalledTimes(1);
-    expect(actionEnhancer).toHaveBeenCalledTimes(0);
+    expect(actionEnhancer).toHaveBeenCalledTimes(1);
+    expect(actionEnhancer.fn).toHaveBeenCalledTimes(0);
 
     creator();
 
     expect(templateEnhancer).toHaveBeenCalledTimes(1);
     expect(actionEnhancer).toHaveBeenCalledTimes(1);
-  });
-
-  it('should throw error on wrong enhancer (without EnhancerType)', () => {
-    const unknownEnhancer = jest.fn();
-
-    expect(() => {
-      actionCreator(unknownEnhancer);
-    }).toThrow();
+    expect(actionEnhancer.fn).toHaveBeenCalledTimes(1);
   });
 
   it('should accept first string argument as action type', () => {
-    const templateEnhancer = createEnhancer(ActionTemplateEnhancer);
+    const templateEnhancer = createTemplateEnhancer();
     const creator = actionCreator('testType', templateEnhancer);
     const action = creator();
 
@@ -65,7 +62,7 @@ describe('`actionCreator`', () => {
   });
 
   it('should accept first `Symbol` argument as action type', () => {
-    const templateEnhancer = createEnhancer(ActionTemplateEnhancer);
+    const templateEnhancer = createTemplateEnhancer();
     const typeSymbol = Symbol('typeSymbol');
     const creator = actionCreator(typeSymbol, templateEnhancer);
     const action = creator();

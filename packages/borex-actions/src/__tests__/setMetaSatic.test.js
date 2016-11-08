@@ -1,6 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-env jest */
-import { EnhancerType, ActionTemplateEnhancer } from 'borex-action-enhancer-helpers/symbols';
 import setMetaStatic from '../setMetaStatic';
 
 
@@ -12,7 +11,6 @@ describe('setMetaStatic', () => {
     const enhancer = setMetaStatic(TestField, TestValue);
 
     expect(enhancer).toBeInstanceOf(Function);
-    expect(enhancer[EnhancerType]).toBe(ActionTemplateEnhancer);
   });
 
   it('should set specified field in `meta`', () => {
