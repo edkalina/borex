@@ -52,6 +52,16 @@ describe('`sideEffectProcessor`', () => {
     expect(next).toBeCalled();
   });
 
+  it('should skip `next` call when `meta.sideEffectsOnly` is true', () => {
+    const { handler, next } = createMiddlewareHandler();
+    const action = createActionWithSideEffects();
+    action.meta.sideEffectsOnly = true;
+
+    handler(action);
+
+    expect(next).not.toBeCalled();
+  });
+
   it('should not fail on actions without `meta`', () => {
     const { handler } = createMiddlewareHandler();
 
