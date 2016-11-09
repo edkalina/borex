@@ -1,18 +1,33 @@
+import composeReducers from './composeReducers';
+
+
 export default function createReducer(reducerFn) {
   const reducersByType = {};
 
+  function registerReducers(type, reducers) {
+    const prevReducers = reducersByType[type];
+    reducersByType[type] = prevReducers ? [...prevReducers, ...reducers] : reducers;
+  }
+
   reducerFn((actionType, ...reducers) => {
-    const prevReducers = reducersByType[actionType];
-    reducersByType[actionType] = prevReducers ? [...prevReducers, ...reducers] : reducers;
-  });
-
-  return (state, action) => {
-    const reducers = reducersByType[action.type];
-
-    if (!reducers) {
-      return state;
+    if (Array.isArray(actionType)) {
+      actionType.forEach((type) => registerReducers(type, reducers));
+      return;
     }
 
-    return reducers.reduce((newState, reducer) => reducer(newState, action), state);
+    registerReducers(actionType, reducers);
+  });
+
+  const reducerByType = Object.keys(reducersByType).reduce((memo, type) => {
+    // eslint-disable-next-line no-param-reassign
+    memo[type] = composeReducers(...reducersByType[type]);
+
+    return memo;
+  }, {});
+
+  return (state, action) => {
+    const reducer = reducerByType[action.type];
+
+    return reducer ? reducer(state, action) : state;
   };
 }

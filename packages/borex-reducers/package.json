@@ -18,5 +18,6 @@
   "bugs": {
     "url": "https://github.com/kastigar/borex/issues"
   },
-  "homepage": "https://github.com/kastigar/borex#readme"
+  "homepage": "https://github.com/kastigar/borex#readme",
+  "dependencies": {}
 }
