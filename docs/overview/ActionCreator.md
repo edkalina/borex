@@ -87,7 +87,7 @@ const action = creator(new Error('error'));
 
 По-умолчанию, каждый **ActionCreator** получает уникальный `type`, который генерирует `actionCreator`.
 
-Есть возможность задать `type` вручную. `actionCreator` принимает опциональный первый парметр типа `string` или `symbol`:
+Есть возможность задать `type` вручную. `actionCreator` принимает опциональный первый параметр типа `string` или `symbol`:
 
 ```js
 const creator = actionCreator('myAction');
@@ -120,4 +120,48 @@ const action = creator();
 
 ## Enhancers
 
-Также есть возможность управлять генерацией `action`'ов с помощью enhancer функций. Подробнее о них [далее](./actionEnhancers.md)
+Также есть возможность управлять генерацией `action`'ов с помощью enhancer функций. О них в [следующем разделе](./ActionEnhancers.md).
+
+## commandCreator
+
+С помощью `commandCreator` можно создавать action'ы, которые выполняют лишь side-effect'ы или так называемые async-actions.
+
+```js
+import commandCreator from 'borex-actions/commandCreator';
+
+const creator = commandCreator((context, param) => {
+  const { dispatch, getState } = context;
+
+  dispatch(someAction(param));
+});
+const action = creator('param');
+
+store.dispatch(action); // Will call function passed to `commandCreator`
+
+// результат action
+{
+  type: 'ACTION#0',
+  payload: 'param',
+  error: false,
+  meta: {
+    creatorArgs: ['param'],
+    sideEffects: [
+      <Function>
+    ],
+    sideEffectsOnly: true
+  }
+}
+```
+
+Если посмотреть на полученный action, то можно понять, что `commandCreator` это всего лишь alias:
+
+```js
+function commandCreator(command) {
+  return actionCreator(
+    withSideEffect(command),
+    setMetaStatic('sideEffectsOnly', true)
+  );
+}
+```
+
+> См. также [Side-effects](./SideEffects.md)
