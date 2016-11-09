@@ -1,5 +1,6 @@
 import isFunction from 'lodash/isFunction';
 
+
 let actionIndex = 0;
 
 function generateType() {
