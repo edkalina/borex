@@ -34,4 +34,11 @@ describe('`inReducerWrapper`', () => {
 
     expect(newState).toBe(InitialState);
   });
+
+  it('should set displayName of wrapper function', () => {
+    function testFunction() {}
+    const subReducer = inReducerWrapper(TestPath, testFunction);
+
+    expect(subReducer.displayName).toBe('testFunctionIn');
+  });
 });

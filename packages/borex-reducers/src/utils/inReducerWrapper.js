@@ -12,6 +12,11 @@ function updateInPath(path, atom, updater, index = 0) {
 
 export default function inReducerWrapper(pathStr, reducer) {
   const path = pathStr.split('.');
+  const wrapper = (state, action) => updateInPath(path, state, atom => reducer(atom, action));
 
-  return (state, action) => updateInPath(path, state, atom => reducer(atom, action));
+  if (process.env.NODE_ENV !== 'production') {
+    wrapper.displayName = reducer.name ? `${reducer.name}In` : 'anonymousInReducer';
+  }
+
+  return wrapper;
 }
