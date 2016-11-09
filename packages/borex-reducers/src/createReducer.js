@@ -1,9 +1,18 @@
 export default function createReducer(reducerFn) {
   const reducersByType = {};
 
+  function registerReducers(type, reducers) {
+    const prevReducers = reducersByType[type];
+    reducersByType[type] = prevReducers ? [...prevReducers, ...reducers] : reducers;
+  }
+
   reducerFn((actionType, ...reducers) => {
-    const prevReducers = reducersByType[actionType];
-    reducersByType[actionType] = prevReducers ? [...prevReducers, ...reducers] : reducers;
+    if (Array.isArray(actionType)) {
+      actionType.forEach((type) => registerReducers(type, reducers));
+      return;
+    }
+
+    registerReducers(actionType, reducers);
   });
 
   return (state, action) => {

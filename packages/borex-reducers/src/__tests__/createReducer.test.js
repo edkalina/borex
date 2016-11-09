@@ -21,8 +21,8 @@ describe('`createReducer`', () => {
 
 describe('reducer created with `createReducer`', () => {
   it('should call declared reducers correctly', () => {
-    const subReducer1 = jest.fn(() => 'state1');
-    const subReducer2 = jest.fn(() => 'state2');
+    const subReducer1 = jest.fn(() => 'newState1');
+    const subReducer2 = jest.fn(() => 'newState2');
     const action1 = { type: 'testType1' };
     const action2 = { type: 'testType2' };
     const declareFn = (on) => {
@@ -31,20 +31,22 @@ describe('reducer created with `createReducer`', () => {
     };
     const reducer = createReducer(declareFn);
 
-    reducer('currentState', action1);
+    const newState1 = reducer('currentState', action1);
 
     expect(subReducer1).toHaveBeenCalledTimes(1);
     expect(subReducer2).toHaveBeenCalledTimes(0);
+    expect(newState1).toBe('newState1');
 
-    reducer('currentState', action2);
+    const newState2 = reducer('currentState', action2);
 
     expect(subReducer1).toHaveBeenCalledTimes(1);
     expect(subReducer2).toHaveBeenCalledTimes(1);
+    expect(newState2).toBe('newState2');
   });
 
   it('should call all declared reducers for one action', () => {
-    const subReducer1 = jest.fn(() => 'state1');
-    const subReducer2 = jest.fn(() => 'state2');
+    const subReducer1 = jest.fn(() => 'newState1');
+    const subReducer2 = jest.fn(() => 'newState2');
     const action = { type: 'testType' };
     const declareFn = (on) => {
       on(action.type, subReducer1);
@@ -56,6 +58,22 @@ describe('reducer created with `createReducer`', () => {
 
     expect(subReducer1).toHaveBeenCalledTimes(1);
     expect(subReducer2).toHaveBeenCalledTimes(1);
+  });
+
+  it('should support multiaction handlers', () => {
+    const subReducer = jest.fn(() => 'newState');
+    const action1 = { type: 'testType1' };
+    const action2 = { type: 'testType2' };
+    const declareFn = (on) => {
+      on([action1.type, action2.type], subReducer);
+    };
+    const reducer = createReducer(declareFn);
+
+    reducer('currentState', action1);
+    expect(subReducer).toHaveBeenCalledTimes(1);
+
+    reducer('currentState', action2);
+    expect(subReducer).toHaveBeenCalledTimes(2);
   });
 
   it('should not change state if there is no suitable reducers', () => {
