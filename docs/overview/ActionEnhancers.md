@@ -82,7 +82,7 @@ const action = creator(1, 'dialog');
 
 ## setMetaStatic
 
-Похож на `setMeta`. Но устанавливает конкретное значение в указанном поле в объекте `meta`.
+Похож на `setMeta`. Но устанавливает конкретное *значение* в указанном поле объекта `meta`.
 
 ```js
 import actionCreator from 'borex-actions/actionCreator';
@@ -104,6 +104,10 @@ const action = creator();
   }
 }
 ```
+
+> Помимо прочего, `setMetaStatic` отрабатывает при запуске `actionCreator` и изменяет шаблон action'а, в то время как `setMeta` отрабатывает при создании action'а и меняет сам action.
+
+> Подробнее о видах enhancer'ов смотри [Writing enhancers](/docs/writingEnhancers.md)
 
 ## setError
 
@@ -132,7 +136,7 @@ const action = fetchError('Network error');
 ## withSideEffect
 
 > Для работы данного enhancer'а необходимо подключить `sideEffectProcessor` middleware
-> См. также [sideEffectProcessor](./sideEffectProcessor.md)
+> См. также [Side-effects](./SideEffects.md)
 
 `withSideEffect` добавляет функцию в `meta.sideEffects`. В последствии эта функция будет вызвана после dispatch'а.
 
@@ -163,3 +167,75 @@ store.dispatch(action); // Will log 'param' in console
 }
 
 ```
+
+## withReducer/withReducerIn
+
+> Данный enhancer находится в пакете `borex-reducers`
+
+> Для работы данного enhancer'а необходимо использовать `createMetaReducer`
+
+> См. также [Self-reducing actions](./SelfReducingActions.md)
+
+`withReducer` добавляет reducer в `meta.reducer`, который впоследствии будет запущен с помощью `createMetaReducer`. Позволяет определять reduce функции прямо в объявлении `actionCreator` и избавляет от надобности писать отдельно reduce функции.
+
+```js
+import actionCreator from 'borex-actions/actionCreator';
+import withReducer from 'borex-reducers/withReducer';
+import createMetaReducer from 'borex-reducers/createMetaReducer';
+
+const store = createStore(createMetaReducer(), 0);
+const increment = actionCreator(
+  withReducer((state) => state + 1)
+);
+const action = increment();
+
+store.dispatch(action); // will increment state value of store
+
+// результат action
+{
+  type: 'ACTION#0',
+  payload: undefined,
+  error: false,
+  meta: {
+    creatorArgs: [],
+    reducer: <Function>
+  }
+}
+
+```
+
+`withReducerIn` это версия `withReducer`, которая принимает первым параметром "путь" в state обьекте, по которому нужно запустить reducer.
+
+```js
+import actionCreator from 'borex-actions/actionCreator';
+import withReducerIn from 'borex-reducers/withReducerIn';
+import createMetaReducer from 'borex-reducers/createMetaReducer';
+
+const initialState = { counter: { value: 0 } };
+const store = createStore(createMetaReducer(), initialState);
+
+const increment = actionCreator(
+  withReducerIn('counter.value', (state) => state + 1)
+);
+const action = increment();
+
+store.dispatch(action); // will increment `counter.value` of store's state
+
+// результат action
+{
+  type: 'ACTION#0',
+  payload: undefined,
+  error: false,
+  meta: {
+    creatorArgs: [],
+    reducer: <Function>
+  }
+}
+
+```
+
+> Подробнее в [*In Reducers](./InReducers.md)
+
+## Создание enhancer'ов
+
+См. раздел [Writing enhancers](/docs/WritingEnhancers.md).
