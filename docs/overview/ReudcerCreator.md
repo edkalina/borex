@@ -57,3 +57,20 @@ export default createReducerIn('counter', (on) => {
   on(decrement, (counter) => counter - 1); // state.counter will be decremented
 });
 ```
+
+## composeReducers
+
+`composeReducers` создаёт новый reducer, который объеденяет указанные в аргументах.
+
+```js
+import composeReducers from 'borex-reducers/composeReducers';
+import someReducer from './someReducer';
+import anotherReducer from './anotherReducer';
+
+
+const composedReducer = composeReducers(someReducer, anotherReducer);
+```
+
+## Reducer Helpers
+
+В [следующем](./ReducerHelpers.md) разделе описаны reducer helper'ы, которые предоставляет `borex`.
