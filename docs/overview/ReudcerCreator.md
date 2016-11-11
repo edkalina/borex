@@ -17,7 +17,7 @@ export default createReducer((on) => {
 });
 ```
 
-`createReducer` принимает один аргумент, функцию, которая связывает action'ы с reduce-функциями.
+`createReducer` принимает один аргумент - функцию, которая связывает action'ы с reduce-функциями.
 
 ## `on`
 
@@ -60,7 +60,7 @@ export default createReducerIn('counter', (on) => {
 
 ## composeReducers
 
-`composeReducers` создаёт новый reducer, который объеденяет указанные в аргументах.
+`composeReducers` создаёт новый reducer, который объеденяет reducer'ы, указанные в аргументах.
 
 ```js
 import composeReducers from 'borex-reducers/composeReducers';

@@ -5,7 +5,7 @@
 * `actionCreator` - фабрика для создания action creator'ов
 * **ActionCreator** - сам action creator, созданный нашей фабрикой
 
-Давайте посмотрим как объявляется простой **ActionCreator**:
+Давайте посмотрим, как объявляется простой **ActionCreator**:
 
 ```js
 import actionCreator from `borex-actions/actionCreator`;
@@ -13,7 +13,7 @@ import actionCreator from `borex-actions/actionCreator`;
 const creator = actionCreator();
 ```
 
-Теперь посмотрим на `action`, который сгенерирует наш **ActionCreator**:
+Теперь посмотрим на `action`, который будет создан нашим **ActionCreator**:
 
 ```js
 const action = creator();
@@ -29,7 +29,7 @@ const action = creator();
 }
 ```
 
-`action` придерживается [FSA](https://github.com/acdlite/flux-standard-action) стандарта. Можно видеть, что `type` уже определён, `payload` - `undefined`, `error` установлен в `false`, а в `meta` лежит массив `creatorArgs`, аргументы, с которыми был вызван **ActionCreator**. Теперь посмотрим, как можно управлять всем этим.
+`action` придерживается [FSA](https://github.com/acdlite/flux-standard-action) стандарта. Можно заметить, что `type` уже определён, `payload` - `undefined`, `error` установлен в `false`, а в `meta` лежит массив `creatorArgs` (аргументы, с которыми был вызван **ActionCreator**). Теперь посмотрим, как можно управлять всем этим.
 
 ## Payload
 
@@ -67,7 +67,7 @@ const action = creator('payload', 'another');
 
 ## Error
 
-Если `payload` является объектом класса `Error`, то **ActionCreator** автоматически утановит `error` в `true`:
+Если `payload` является объектом класса `Error`, то **ActionCreator** автоматически установит `error` в `true`:
 
 ```js
 const action = creator(new Error('error'));
@@ -85,7 +85,7 @@ const action = creator(new Error('error'));
 
 ## Type
 
-По-умолчанию, каждый **ActionCreator** получает уникальный `type`, который генерирует `actionCreator`.
+По-умолчанию, каждый **ActionCreator** получает уникальный `type`, который будет создан `actionCreator`'ом'.
 
 Есть возможность задать `type` вручную. `actionCreator` принимает опциональный первый параметр типа `string` или `symbol`:
 
