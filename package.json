@@ -17,7 +17,12 @@
     "test": "npm run lint && jest",
     "test:coverage": "npm run lint && jest --coverage",
     "build": "lerna exec -- node ../../scripts/build_package.js",
-    "clean": "lerna exec -- node ../../scripts/clean_package.js"
+    "clean": "lerna exec -- node ../../scripts/clean_package.js",
+    "docs:clean": "rimraf _book",
+    "docs:prepare": "gitbook install",
+    "docs:build": "npm run docs:prepare && gitbook build",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:publish": "npm run docs:clean && npm run docs:build && cd _book && git init && git commit --allow-empty -m 'update book' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update book' && git push git@github.com:kastigar/borex gh-pages --force"
   },
   "devDependencies": {
     "babel-cli": "^6.5.2",
@@ -36,10 +41,12 @@
     "eslint-plugin-jsx-a11y": "^2.2.1",
     "eslint-plugin-react": "^6.2.0",
     "flux-standard-action": "^1.0.0",
+    "gitbook-cli": "^2.3.0",
     "glob": "^7.1.1",
     "jest": "^16.0.2",
     "lerna": "2.0.0-beta.30",
     "lodash": "^4.16.6",
-    "minimatch": "^3.0.3"
+    "minimatch": "^3.0.3",
+    "rimraf": "^2.3.4"
   }
 }
