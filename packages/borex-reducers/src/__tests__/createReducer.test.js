@@ -36,6 +36,7 @@ describe('reducer created with `createReducer`', () => {
     expect(subReducer1).toHaveBeenCalledTimes(1);
     expect(subReducer2).toHaveBeenCalledTimes(0);
     expect(newState1).toBe('newState1');
+    expect(subReducer1).toHaveBeenCalledWith('currentState', action1);
 
     const newState2 = reducer('currentState', action2);
 
