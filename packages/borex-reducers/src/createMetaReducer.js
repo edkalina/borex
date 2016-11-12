@@ -1,7 +1,7 @@
 function applyMetaReducer(state, action) {
   const metaReducer = action.meta && action.meta.reducer;
 
-  return metaReducer ? metaReducer(state, action.payload, action) : state;
+  return metaReducer ? metaReducer(state, action) : state;
 }
 
 export default function createMetaReducer(reducer) {
@@ -9,5 +9,5 @@ export default function createMetaReducer(reducer) {
     return applyMetaReducer;
   }
 
-  return (state, action) => reducer(applyMetaReducer(state, action), action.payload, action);
+  return (state, action) => reducer(applyMetaReducer(state, action), action);
 }

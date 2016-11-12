@@ -26,7 +26,7 @@ describe('reducer created with `createMetaReducer`', () => {
     const reducer = createMetaReducer();
     const actionWithReducer = createTestAction(true);
     const newState = reducer('currentState', actionWithReducer);
-    const expectedArgs = ['currentState', actionWithReducer.payload, actionWithReducer];
+    const expectedArgs = ['currentState', actionWithReducer];
 
     expect(actionWithReducer.meta.reducer).toBeCalledWith(...expectedArgs);
     expect(newState).toBe('stateFromMeta');
@@ -36,7 +36,7 @@ describe('reducer created with `createMetaReducer`', () => {
     const argReducer = jest.fn(() => 'stateFromArg');
     const reducer = createMetaReducer(argReducer);
     const action = createTestAction(false);
-    const expectedArgs = ['currentState', action.payload, action];
+    const expectedArgs = ['currentState', action];
 
     const newState = reducer('currentState', action);
 
