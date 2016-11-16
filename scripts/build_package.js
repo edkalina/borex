@@ -11,6 +11,10 @@ const packageName = path.basename(packageDir);
 const srcDir = path.resolve(packageDir, 'src');
 const testsPattern = '**/__tests__/**';
 
+if (packageName === 'babel-plugin-borex-autotype') {
+  process.exit();
+}
+
 function buildJs(file) {
   if (minimatch(file, testsPattern)) {
     return;

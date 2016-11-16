@@ -1,7 +1,8 @@
 {
-  "name": "borex-reducers",
-  "version": "0.0.5",
-  "main": "index.js",
+  "name": "babel-plugin-borex-autotype",
+  "version": "0.0.0",
+  "description": "Babel plugin that automatically generates actionCreator type",
+  "main": "src/index.js",
   "author": "Denis Nevmerzhitskii <kastigarster@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -13,11 +14,11 @@
     "redux",
     "reducer",
     "action-creator",
-    "functional"
+    "babel",
+    "babel-plugin"
   ],
   "bugs": {
     "url": "https://github.com/kastigar/borex/issues"
   },
-  "homepage": "https://github.com/kastigar/borex#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/kastigar/borex#readme"
 }
