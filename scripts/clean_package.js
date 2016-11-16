@@ -13,6 +13,10 @@ const srcFilesPattern = path.resolve(packageDir, 'src', jsPattern);
 const depFilesPattern = path.resolve(packageDir, 'node_modules', jsPattern);
 const jsFiles = glob.sync(jsFilesPattern, { nodir: true });
 
+if (packageName === 'babel-plugin-borex-autotype') {
+  process.exit();
+}
+
 jsFiles.forEach((file) => {
   if (minimatch(file, srcFilesPattern) || minimatch(file, depFilesPattern)) {
     return;
