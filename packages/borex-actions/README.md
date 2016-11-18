@@ -4,7 +4,7 @@ Borex is helper library for [redux](http://redux.js.org/).
 
 Learn it by [Documentation](http://kastigar.github.io/borex/) (sorry, it is still draft in russian).
 
-Also check rewritten [counter example](https://github.com/kastigar/borex/commit/bfe1879f31d3b04f183788c2ce65ec3a1c7cd70a) and another [remake](https://github.com/kastigar/borex/commit/f34c5174abd9e7608957def261a515e2b9e8c8ea) with self-reducing actions.
+Also check rewritten [counter example](https://github.com/kastigar/borex/commit/07df6bcb780b733db3a8353205e8a5fd13108a9b) and another [remake](https://github.com/kastigar/borex/commit/5155cbe48f568709a65ea66b0e285f666956def7) with self-reducing actions.
 ## Action helper
 
 ```
@@ -64,6 +64,38 @@ const dataReducer = createReducer((on) => {
 
 const rootReducer = composeReducers(dataReducer, counterReducer);
 ```
+
+## Autotype babel plugin
+
+```
+npm install -D babel-plugin-borex-autotype
+```
+
+`.babelrc`
+
+```
+{
+  "plugins": [
+    "babel-plugin-borex-autotype"
+  ]
+}
+```
+
+This plugin inserts names for all anonymous `actionCreator` calls.
+
+**Input**(counter.js):
+
+```js
+const increment = actionCreator();
+```
+
+**Output**:
+
+```js
+const increment = actionCreator('counter/increment');
+```
+
+Check [plugin documentation page](https://kastigar.github.io/borex/docs/BabelAutotype.html) for more details.
 
 ## Name and logo
 

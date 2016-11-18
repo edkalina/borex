@@ -10,21 +10,21 @@
   * [Reducer Helpers](/docs/overview/ReducerHelpers.md)
   * [*In Reducers](/docs/overview/InReducers.md)
 * Tutorials
-  * Rewriting counter app
-  * Rewriting todomvc app
-  * Meta reducer
-  * Analytics action enhancer
-  * Meta-reducers and redux-form
-  * Composing reducers
+  * (tbd) Rewriting counter app
+  * (tbd) Rewriting todomvc app
+  * (tbd) Meta reducer
+  * (tbd) Analytics action enhancer
+  * (tbd) Meta-reducers and redux-form
+  * (tbd) Composing reducers
 * API
-  * actionCreator
-  * commandCreator
-  * sideEffectProcessor
-  * createReducer
-  * createMetaReducer
-  * composeReducers
-  * Action Enhancers
-  * Reducer Helpers
+  * (tbd) actionCreator
+  * (tbd) commandCreator
+  * (tbd) sideEffectProcessor
+  * (tbd) createReducer
+  * (tbd) createMetaReducer
+  * (tbd) composeReducers
+  * (tbd) Action Enhancers
+  * (tbd) Reducer Helpers
 * [Writing enhancers](/docs/WritingEnhancers.md)
 * Babel plugins
-  * Auto actionCreator type
+  * [Auto-generated actionCreator type](/docs/BabelAutotype.md)
