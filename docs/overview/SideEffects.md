@@ -38,7 +38,7 @@ const creator = actionCreator(
 
     console.log(param1, param2);
   }),
-  withSideEffect((context, param,) => {
+  withSideEffect((context, param) => {
     console.log('I use only first param', param);
   })
 );

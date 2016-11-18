@@ -165,3 +165,40 @@ function commandCreator(command) {
 ```
 
 > См. также [Side-effects](./SideEffects.md)
+
+## Автоматическое именование action'ов
+
+`borex` предлагает плагин для babel `babel-plugin-borex-autotype`. Он определяет имя, под которым создаётся `actionCreator` и подставляет его первым аргументом.
+
+```js
+// counter.js
+import actionCreator from 'borex-actions/actionCreator';
+
+const increment = actionCreator();
+const decrement = actionCreator();
+
+const incAction = increment();
+const decAction = decrement();
+
+// результат incAction
+{
+  type: 'counter/increment',
+  payload: undefined,
+  error: false,
+  meta: {
+    creatorArgs: []
+  }
+}
+
+// результат decAction
+{
+  type: 'counter/decrement',
+  payload: undefined,
+  error: false,
+  meta: {
+    creatorArgs: []
+  }
+}
+```
+
+Подробности на [странице плагина](/docs/BabelAutotype.md).
