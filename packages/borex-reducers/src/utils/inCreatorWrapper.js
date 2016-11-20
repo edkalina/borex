@@ -1,6 +1,6 @@
-import inReducerWrapper from './inReducerWrapper';
+import scopeReducer from './scopeReducer';
 
 
 export default function inCreatorWrapper(creator) {
-  return (pathStr, ...args) => inReducerWrapper(pathStr, creator(...args));
+  return (pathStr, ...args) => scopeReducer(pathStr, creator(...args));
 }
