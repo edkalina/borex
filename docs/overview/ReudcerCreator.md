@@ -63,12 +63,36 @@ export default createReducerIn('counter', (on) => {
 `composeReducers` создаёт новый reducer, который объеденяет reducer'ы, указанные в аргументах.
 
 ```js
-import composeReducers from 'borex-reducers/composeReducers';
+import composeReducers from 'borex-reducers/utils/composeReducers';
 import someReducer from './someReducer';
 import anotherReducer from './anotherReducer';
 
 
 const composedReducer = composeReducers(someReducer, anotherReducer);
+```
+
+## scopeReducer
+
+Вспомогательная функция, которая принимает один reducer и возвращает новый, который будет запускать переданный reducer по указаному "пути" в state обьекте:
+
+```js
+import scopeReducer from 'borex-reducers/utils/scopeReducer';
+import { increment } from './actions';
+
+const counterReducer = createReducer(on => {
+  on(increment, (state) => state + 1);
+});
+
+const newCounterValue = counterReducer(0, increment()); // newCounterValue is 1
+
+const scopedCounterReducer = scopeReducer('counter', counterReducer);
+
+const newState = scopedCounterReducer({ counter: 0 }, increment());
+
+// newState value
+{
+  counter: 1
+}
 ```
 
 ## Reducer Helpers

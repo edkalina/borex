@@ -10,7 +10,7 @@ function updateInPath(path, atom, updater, index = 0) {
   return newValue === value ? atom : { ...atom, [prop]: newValue };
 }
 
-export default function inReducerWrapper(pathStr, reducer) {
+export default function scopeReducer(pathStr, reducer) {
   const path = pathStr.split('.');
   const wrapper = (state, action) => updateInPath(path, state, atom => reducer(atom, action));
 
