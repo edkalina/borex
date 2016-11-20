@@ -1,4 +1,4 @@
-import inReducerWrapper from './utils/inReducerWrapper';
+import inReducerWrapper from './utils/scopeReducer';
 import withReducer from './withReducer';
 
 

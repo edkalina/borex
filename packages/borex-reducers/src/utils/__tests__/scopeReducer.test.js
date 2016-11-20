@@ -1,6 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 /* eslint-env jest */
-import inReducerWrapper from '../inReducerWrapper';
+import inReducerWrapper from '../scopeReducer';
 
 
 const TestPath = 'level1.level2';
