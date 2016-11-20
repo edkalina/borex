@@ -1,6 +1,3 @@
-import composeReducers from './composeReducers';
-
-
 export default function createReducer(reducerFn) {
   const reducersByType = {};
 
@@ -18,16 +15,13 @@ export default function createReducer(reducerFn) {
     registerReducers(actionType, reducers);
   });
 
-  const reducerByType = Object.keys(reducersByType).reduce((memo, type) => {
-    // eslint-disable-next-line no-param-reassign
-    memo[type] = composeReducers(...reducersByType[type]);
-
-    return memo;
-  }, {});
-
   return (state, action) => {
-    const reducer = reducerByType[action.type];
+    const reducers = reducersByType[action.type];
 
-    return reducer ? reducer(state, action) : state;
+    if (!reducers) {
+      return state;
+    }
+
+    return reducers.reduce((newState, reducer) => reducer(newState, action), state);
   };
 }
