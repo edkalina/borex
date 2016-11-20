@@ -11,7 +11,8 @@ const packageName = path.basename(packageDir);
 const srcDir = path.resolve(packageDir, 'src');
 const testsPattern = '**/__tests__/**';
 
-if (packageName === 'babel-plugin-borex-autotype') {
+if (packageName === 'babel-plugin-borex-autotype' || packageName.startsWith('examples')) {
+  process.stdout.write(`Skipping ${packageName}\n`);
   process.exit();
 }
 
