@@ -13,7 +13,8 @@ const srcFilesPattern = path.resolve(packageDir, 'src', jsPattern);
 const depFilesPattern = path.resolve(packageDir, 'node_modules', jsPattern);
 const jsFiles = glob.sync(jsFilesPattern, { nodir: true });
 
-if (packageName === 'babel-plugin-borex-autotype') {
+if (packageName === 'babel-plugin-borex-autotype' || packageName.startsWith('examples')) {
+  process.stdout.write(`Skipping ${packageName}\n`);
   process.exit();
 }
 
