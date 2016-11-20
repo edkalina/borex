@@ -1,10 +1,12 @@
 {
-  "name": "todomvc",
+  "name": "examples-todomvc",
+  "private": true,
   "version": "0.0.0",
   "description": "TodoMVC example for redux",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "npm run build:borex && node server.js",
+    "build:borex": "cd ../../ && npm run build"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,9 @@
   },
   "homepage": "https://github.com/gaearon/redux-devtools#readme",
   "dependencies": {
+    "babel-plugin-borex-autotype": "0.0.2",
+    "borex-actions": "0.0.7",
+    "borex-reducers": "0.0.7",
     "classnames": "^2.1.2",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
