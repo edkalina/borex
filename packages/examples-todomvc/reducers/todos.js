@@ -1,50 +1,42 @@
-import { ADD_TODO, DELETE_TODO, EDIT_TODO, MARK_TODO, MARK_ALL, CLEAR_MARKED } from '../constants/ActionTypes';
+import createReducer from 'borex-reducers/createReducer';
+import update from 'borex-reducers/update';
+import reject from 'borex-reducers/reject';
+import prepend from 'borex-reducers/prepend';
 
-const initialState = [{
-  text: 'Use Redux',
-  marked: false,
-  id: 0
-}];
+import {
+  addTodo, deleteTodo, editTodo, markTodo, markAll, clearMarked,
+} from '../actions/TodoActions';
 
-export default function todos(state = initialState, action) {
-  switch (action.type) {
-  case ADD_TODO:
-    return [{
-      id: (state.length === 0) ? 0 : state[0].id + 1,
-      marked: false,
-      text: action.text
-    }, ...state];
+function forTodo(reducer) {
+  return (todos, action) => {
+    const payload = action.payload;
+    const targetId = payload.id || payload;
 
-  case DELETE_TODO:
-    return state.filter(todo =>
-      todo.id !== action.id
-    );
-
-  case EDIT_TODO:
-    return state.map(todo =>
-      todo.id === action.id ?
-        { ...todo, text: action.text } :
-        todo
-    );
-
-  case MARK_TODO:
-    return state.map(todo =>
-      todo.id === action.id ?
-        { ...todo, marked: !todo.marked } :
-        todo
-    );
-
-  case MARK_ALL:
-    const areAllMarked = state.every(todo => todo.marked);
-    return state.map(todo => ({
-      ...todo,
-      marked: !areAllMarked
-    }));
-
-  case CLEAR_MARKED:
-    return state.filter(todo => todo.marked === false);
-
-  default:
-    return state;
-  }
+    return todos.map(todo => (todo.id !== targetId ? todo : reducer(todo, action)));
+  };
 }
+
+export default createReducer(on => {
+  on(addTodo, prepend((text, todos) => ({
+    id: (todos.length === 0) ? 0 : todos[0].id + 1,
+    marked: false,
+    text,
+  })));
+
+  on(deleteTodo, reject((todo, targetId) => todo.id === targetId));
+
+  on(editTodo, forTodo(update()));
+
+  on(markTodo, forTodo(update((_, todo) => ({ marked: !todo.marked }))));
+
+  on(markAll, todos => {
+    const areAllMarked = todos.every(todo => todo.marked);
+
+    return todos.map(todo => ({
+      ...todo,
+      marked: !areAllMarked,
+    }));
+  });
+
+  on(clearMarked, reject(todo => todo.marked));
+});

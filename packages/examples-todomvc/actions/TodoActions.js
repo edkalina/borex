@@ -1,42 +1,14 @@
-import * as types from '../constants/ActionTypes';
+import actionCreator from 'borex-actions/actionCreator';
+import setPayload from 'borex-actions/setPayload';
 
-export function addTodo(text) {
-  return {
-    type: types.ADD_TODO,
-    text
-  };
-}
 
-export function deleteTodo(id) {
-  return {
-    type: types.DELETE_TODO,
-    id
-  };
-}
+export const addTodo = actionCreator();
+export const deleteTodo = actionCreator();
 
-export function editTodo(id, text) {
-  return {
-    type: types.EDIT_TODO,
-    id,
-    text
-  };
-}
+export const editTodo = actionCreator(
+  setPayload((id, text) => ({ id, text })),
+);
 
-export function markTodo(id) {
-  return {
-    type: types.MARK_TODO,
-    id
-  };
-}
-
-export function markAll() {
-  return {
-    type: types.MARK_ALL
-  };
-}
-
-export function clearMarked() {
-  return {
-    type: types.CLEAR_MARKED
-  };
-}
+export const markTodo = actionCreator();
+export const markAll = actionCreator();
+export const clearMarked = actionCreator();
