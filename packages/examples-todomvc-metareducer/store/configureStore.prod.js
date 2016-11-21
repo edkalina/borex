@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
-import rootReducer from '../reducers';
+import createMetaReducer from 'borex-reducers/createMetaReducer';
 
 export default function configureStore(initialState) {
-  return createStore(rootReducer, initialState);
+  return createStore(createMetaReducer(), initialState);
 }
