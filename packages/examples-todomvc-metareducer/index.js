@@ -5,7 +5,13 @@ import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
 
-const store = configureStore();
+const store = configureStore({
+  todos: [{
+    text: 'Use Redux',
+    marked: false,
+    id: 0,
+  }],
+});
 
 render(
   <AppContainer>
