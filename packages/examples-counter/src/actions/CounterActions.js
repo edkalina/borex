@@ -1,19 +1,13 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants/ActionTypes';
+import actionCreator from 'borex-actions/actionCreator';
+import commandCreator from 'borex-actions/commandCreator';
 
-export function increment() {
-  return {
-    type: INCREMENT_COUNTER
-  };
-}
 
-export function decrement() {
-  return {
-    type: DECREMENT_COUNTER
-  };
-}
+export const increment = actionCreator();
+export const decrement = actionCreator();
 
-export function incrementIfOdd() {
-  return (dispatch, getState) => {
+export const incrementIfOdd = commandCreator(
+  (context) => {
+    const { dispatch, getState } = context;
     const { counter } = getState();
 
     if (counter % 2 === 0) {
@@ -21,13 +15,13 @@ export function incrementIfOdd() {
     }
 
     dispatch(increment());
-  };
-}
+  }
+);
 
-export function incrementAsync() {
-  return dispatch => {
+export const incrementAsync = commandCreator(
+  ({ dispatch }) => {
     setTimeout(() => {
       dispatch(increment());
     }, 1000);
-  };
-}
+  }
+);

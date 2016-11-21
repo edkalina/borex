@@ -1,8 +1,8 @@
-import { combineReducers } from 'redux';
+import composeReducers from 'borex-reducers/utils/composeReducers';
 import counter from './counter';
 
-const rootReducer = combineReducers({
+const rootReducer = composeReducers(
   counter
-});
+);
 
 export default rootReducer;

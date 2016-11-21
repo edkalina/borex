@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { persistState } from 'redux-devtools';
-import thunk from 'redux-thunk';
+import sideEffectProcessor from 'borex-actions/sideEffectProcessor';
 import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
 
 const enhancer = compose(
-  applyMiddleware(thunk),
+  applyMiddleware(sideEffectProcessor()),
   DevTools.instrument(),
   persistState(
     window.location.href.match(
