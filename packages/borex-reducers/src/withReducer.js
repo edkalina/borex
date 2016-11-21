@@ -7,9 +7,9 @@ export default (reducer) => (actionTpl) => {
   }
 
   // eslint-disable-next-line no-param-reassign
-  actionTpl.meta.reducer = (atom, payload, action) => {
-    const newAtom = prevReducer(atom, action);
+  actionTpl.meta.reducer = (state, action) => {
+    const newState = prevReducer(state, action);
 
-    return reducer(newAtom, action);
+    return reducer(newState, action);
   };
 };
