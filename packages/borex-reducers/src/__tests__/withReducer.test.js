@@ -24,10 +24,11 @@ describe('`withReducer`', () => {
 
     expect(actionTemplate.meta.reducer).toBeInstanceOf(Function);
 
-    actionTemplate.meta.reducer('currentState', actionTemplate);
+    const newState = actionTemplate.meta.reducer('currentState', actionTemplate);
 
-    expect(reducer1).toBeCalled();
-    expect(reducer2).toBeCalled();
-    expect(reducer3).toBeCalled();
+    expect(reducer1).toBeCalledWith('currentState', actionTemplate);
+    expect(reducer2).toBeCalledWith('state1', actionTemplate);
+    expect(reducer3).toBeCalledWith('state2', actionTemplate);
+    expect(newState).toBe('state3');
   });
 });
