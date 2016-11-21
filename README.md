@@ -4,7 +4,8 @@ Borex is helper library for [redux](http://redux.js.org/).
 
 Learn it by [Documentation](http://kastigar.github.io/borex/) (sorry, it is still draft in russian).
 
-Also check rewritten [counter example](https://github.com/kastigar/borex/commit/07df6bcb780b733db3a8353205e8a5fd13108a9b) and another [remake](https://github.com/kastigar/borex/commit/5155cbe48f568709a65ea66b0e285f666956def7) with self-reducing actions.
+Also check rewritten [counter example](https://github.com/kastigar/borex/commit/71df7a3a86300723dd7cbdd70cbb28d308bf574b?diff=split) and another [remake](https://github.com/kastigar/borex/commit/22dc3af6c1f887b478131ef00c6ab0abbd52e90d?diff=split) with self-reducing actions. The same for [TodoMVC example](https://github.com/kastigar/borex/commit/896d842435373b35706bf9ef80f393c98eec63b3?diff=split) ([remake](https://github.com/kastigar/borex/commit/8a941bce10e30761ef4adf1fe95c4a484b1b518a?diff=split) with self-reducing actions).
+
 ## Action helper
 
 ```
