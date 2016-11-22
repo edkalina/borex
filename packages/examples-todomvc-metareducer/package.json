@@ -1,7 +1,7 @@
 {
   "name": "examples-todomvc-metareducer",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "TodoMVC example for redux",
   "main": "server.js",
   "scripts": {
@@ -30,9 +30,9 @@
   },
   "homepage": "https://github.com/gaearon/redux-devtools#readme",
   "dependencies": {
-    "babel-plugin-borex-autotype": "0.0.2",
-    "borex-actions": "0.0.7",
-    "borex-reducers": "0.0.7",
+    "babel-plugin-borex-autotype": "^0.1.0",
+    "borex-actions": "^0.1.0",
+    "borex-reducers": "^0.1.0",
     "classnames": "^2.1.2",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
