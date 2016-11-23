@@ -1,0 +1,678 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Self-reducing Actions · Borex</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ReudcerCreator.html" />
+    
+    
+    <link rel="prev" href="SideEffects.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Read Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Overview
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ActionCreator.html">
+            
+                <a href="ActionCreator.html">
+            
+                    
+                    Action Creator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ActionEnhancers.html">
+            
+                <a href="ActionEnhancers.html">
+            
+                    
+                    Action Enhancers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="SideEffects.html">
+            
+                <a href="SideEffects.html">
+            
+                    
+                    Side-effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="SelfReducingActions.html">
+            
+                <a href="SelfReducingActions.html">
+            
+                    
+                    Self-reducing Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="ReudcerCreator.html">
+            
+                <a href="ReudcerCreator.html">
+            
+                    
+                    Reducer Creator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="ReducerHelpers.html">
+            
+                <a href="ReducerHelpers.html">
+            
+                    
+                    Reducer Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="InReducers.html">
+            
+                <a href="InReducers.html">
+            
+                    
+                    *In Reducers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Tutorials
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    (tbd) Rewriting counter app
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    (tbd) Rewriting todomvc app
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    (tbd) Meta reducer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    (tbd) Analytics action enhancer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    (tbd) Meta-reducers and redux-form
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    (tbd) Composing reducers
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    (tbd) actionCreator
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    (tbd) commandCreator
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    (tbd) sideEffectProcessor
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    (tbd) createReducer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    (tbd) createMetaReducer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    (tbd) composeReducers
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    (tbd) Action Enhancers
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    (tbd) Reducer Helpers
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../WritingEnhancers.html">
+            
+                <a href="../WritingEnhancers.html">
+            
+                    
+                    Writing enhancers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Babel plugins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../BabelAutotype.html">
+            
+                <a href="../BabelAutotype.html">
+            
+                    
+                    Auto-generated actionCreator type
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Self-reducing Actions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="self-reducing-actions">Self-reducing Actions</h1>
+<p><code class="language-">borex</code> &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x432;&#x430;&#x442;&#x44C; self-reducing actions. &#x41E;&#x441;&#x43D;&#x43E;&#x432;&#x43D;&#x430;&#x44F; &#x438;&#x434;&#x435;&#x44F; &#x442;&#x430;&#x43A;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x434;&#x445;&#x43E;&#x434;&#x430; - &#x44D;&#x442;&#x43E; &#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; reduce &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E; &#x43D;&#x435;&#x43F;&#x43E;&#x441;&#x440;&#x435;&#x434;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E; &#x432; action creator&apos;&#x435;. &#x422;&#x430;&#x43A;&#x438;&#x43C; &#x43E;&#x431;&#x440;&#x430;&#x437;&#x43E;&#x43C; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x432;&#x43E;&#x43E;&#x431;&#x449;&#x435; &#x43D;&#x435; &#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; reducer&apos;&#x44B; &#x432; &#x43E;&#x442;&#x434;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x445; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;&#x445; &#x438;&#x43B;&#x438; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44F;&#x445;.</p>
+<h2 id="withreducer">withReducer</h2>
+<p>&#x414;&#x43B;&#x44F; &#x442;&#x43E;&#x433;&#x43E;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x440;&#x438;&#x432;&#x44F;&#x437;&#x430;&#x442;&#x44C; reduce &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E; &#x43A; action&apos;&#x443;, &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x432;&#x43E;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C;&#x441;&#x44F; <code class="language-">withReducer</code> enhancer&apos;&#x43E;&#x43C;:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">import</span> actionCreator <span class="token keyword">from</span> <span class="token string">&apos;borex-actions/actionCreator&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> withReducer <span class="token keyword">from</span> <span class="token string">&apos;borex-reducers/withReducer&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> setFlag <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span>
+  <span class="token function">withReducer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>state<span class="token punctuation">,</span> flag<span class="token punctuation">:</span> action<span class="token punctuation">.</span>payload <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">withReducer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>state<span class="token punctuation">,</span> counter<span class="token punctuation">:</span> state<span class="token punctuation">.</span>counter <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;ACTION#0&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> undefined<span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    reducer<span class="token punctuation">:</span> <span class="token operator">&lt;</span>Function<span class="token operator">&gt;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x41E;&#x431;&#x44A;&#x44F;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x44B;&#x439; reducer &#x43F;&#x43E;&#x44F;&#x432;&#x438;&#x442;&#x441;&#x44F; &#x432; <code class="language-">meta.reducer</code> &#x438; &#x431;&#x443;&#x434;&#x435;&#x442; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D; &#x43F;&#x440;&#x438; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x438; <code class="language-">createMetaReducer</code>.</p>
+<p>&#x41C;&#x43E;&#x436;&#x43D;&#x43E; &#x43E;&#x431;&#x44C;&#x44F;&#x432;&#x438;&#x442;&#x44C; &#x43B;&#x44E;&#x431;&#x43E;&#x435; &#x43A;&#x43E;&#x43B;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43E; reducer&apos;&#x43E;&#x432;. &#x412; &#x438;&#x442;&#x43E;&#x433;&#x435; &#x43E;&#x43D;&#x438; &#x431;&#x443;&#x434;&#x443;&#x442; &#x43E;&#x431;&#x44A;&#x435;&#x434;&#x435;&#x43D;&#x435;&#x43D;&#x44B; &#x432; &#x43E;&#x434;&#x43D;&#x443; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x44E;.</p>
+<h2 id="withreducerin">withReducerIn</h2>
+<p>&#x422;&#x430;&#x43A;&#x436;&#x435; &#x441;&#x443;&#x449;&#x435;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x432;&#x435;&#x440;&#x441;&#x438;&#x44F; <code class="language-">withReducer</code>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x430;&#x44F; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x43C; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x43C; &#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x435;&#x442; &quot;&#x43F;&#x443;&#x442;&#x44C;&quot; &#x432; state &#x43E;&#x431;&#x44C;&#x435;&#x43A;&#x442;&#x435;, &#x43F;&#x43E; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C;&#x443; &#x43D;&#x443;&#x436;&#x43D;&#x43E; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44C; reducer:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">import</span> actionCreator <span class="token keyword">from</span> <span class="token string">&apos;borex-actions/actionCreator&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> withReducer <span class="token keyword">from</span> <span class="token string">&apos;borex-reducers/withReducer&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> setFlag <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span>
+  <span class="token function">withReducerIn</span><span class="token punctuation">(</span><span class="token string">&apos;flag&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>flag<span class="token punctuation">,</span> action<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> action<span class="token punctuation">.</span>payload<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">withReducerIn</span><span class="token punctuation">(</span><span class="token string">&apos;counter&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>counter<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x42D;&#x442;&#x430; &#x432;&#x435;&#x440;&#x441;&#x438;&#x44F; action creator&apos;&#x430; &#x432;&#x44B;&#x433;&#x43B;&#x44F;&#x434;&#x438;&#x442; &#x43F;&#x440;&#x43E;&#x449;&#x435; &#x438; &#x43F;&#x43E;&#x43D;&#x44F;&#x442;&#x43D;&#x435;&#x439;. &#x41D;&#x43E; &#x442;&#x430;&#x43A;&#x43E;&#x439; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x435;&#x442; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x441; plain javascript &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430;&#x43C;&#x438;.</p>
+<h2 id="createmetareducer">createMetaReducer</h2>
+<p>&#x414;&#x43B;&#x44F; &#x442;&#x43E;&#x433;&#x43E;, &#x447;&#x442;&#x43E;&#x431;&#x44B; <code class="language-">meta.reducer</code> &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x43B;&#x441;&#x44F;, &#x43D;&#x443;&#x436;&#x43D;&#x43E; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; <code class="language-">createMetaReducer</code>. &#x41E;&#x43D; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x438;&#x442;, &#x435;&#x441;&#x442;&#x44C; &#x43B;&#x438; &#x443; action&apos;&#x430; reducer, &#x438; &#x43F;&#x440;&#x438; &#x43D;&#x430;&#x43B;&#x438;&#x447;&#x438;&#x438; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442; &#x435;&#x433;&#x43E;.</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;redux&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> createMetaReducer <span class="token keyword">from</span> <span class="token string">&apos;borex-reducers/createMetaReducer&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span><span class="token function">createMetaReducer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  flag<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  counter<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><code class="language-">createMetaReducer</code> &#x441;&#x43E;&#x437;&#x434;&#x430;&#x451;&#x442; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; reducer, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x451;&#x442;&#x441;&#x44F; redux store&apos;&#x443;.</p>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x435;&#x441;&#x442;&#x44C; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x44C; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438;&#x439; reducer &#x441;&#x43E;&#x432;&#x43C;&#x435;&#x441;&#x442;&#x43D;&#x43E; &#x441; meta-reducer&apos;&#x430;&#x43C;&#x438;, &#x435;&#x433;&#x43E; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x442;&#x44C; &#x432; &#x43A;&#x430;&#x447;&#x435;&#x441;&#x442;&#x432;&#x435; &#x43F;&#x435;&#x440;&#x432;&#x43E;&#x433;&#x43E; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;redux&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> createMetaReducer <span class="token keyword">from</span> <span class="token string">&apos;borex-reducers/createMetaReducer&apos;</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> rootReducer <span class="token keyword">from</span> <span class="token string">&apos;./reducers/index&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span><span class="token function">createMetaReducer</span><span class="token punctuation">(</span>rootReducer<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  flag<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  counter<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x422;&#x435;&#x43F;&#x435;&#x440;&#x44C; &#x43E;&#x431;&#x430; reducer&apos;&#x430; <code class="language-">rootReducer</code> &#x438; <code class="language-">meta.reducer</code> &#x431;&#x443;&#x434;&#x443;&#x442; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x44B;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SideEffects.html" class="navigation navigation-prev " aria-label="Previous page: Side-effects">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ReudcerCreator.html" class="navigation navigation-next " aria-label="Next page: Reducer Creator">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Self-reducing Actions","level":"1.2.4","depth":2,"next":{"title":"Reducer Creator","level":"1.2.5","depth":2,"path":"docs/overview/ReudcerCreator.md","ref":"docs/overview/ReudcerCreator.md","articles":[]},"previous":{"title":"Side-effects","level":"1.2.3","depth":2,"path":"docs/overview/SideEffects.md","ref":"docs/overview/SideEffects.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/kastigar/borex/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/kastigar/borex/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Borex","gitbook":">=3.2.1"},"file":{"path":"docs/overview/SelfReducingActions.md","mtime":"2016-11-16T11:30:27.723Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-23T09:56:19.204Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

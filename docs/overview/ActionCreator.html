@@ -1,0 +1,781 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Action Creator · Borex</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ActionEnhancers.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Read Me
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Overview
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="ActionCreator.html">
+            
+                <a href="ActionCreator.html">
+            
+                    
+                    Action Creator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ActionEnhancers.html">
+            
+                <a href="ActionEnhancers.html">
+            
+                    
+                    Action Enhancers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="SideEffects.html">
+            
+                <a href="SideEffects.html">
+            
+                    
+                    Side-effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="SelfReducingActions.html">
+            
+                <a href="SelfReducingActions.html">
+            
+                    
+                    Self-reducing Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="ReudcerCreator.html">
+            
+                <a href="ReudcerCreator.html">
+            
+                    
+                    Reducer Creator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="ReducerHelpers.html">
+            
+                <a href="ReducerHelpers.html">
+            
+                    
+                    Reducer Helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="InReducers.html">
+            
+                <a href="InReducers.html">
+            
+                    
+                    *In Reducers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Tutorials
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    (tbd) Rewriting counter app
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    (tbd) Rewriting todomvc app
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    (tbd) Meta reducer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    (tbd) Analytics action enhancer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    (tbd) Meta-reducers and redux-form
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    (tbd) Composing reducers
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    API
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" >
+            
+                <span>
+            
+                    
+                    (tbd) actionCreator
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" >
+            
+                <span>
+            
+                    
+                    (tbd) commandCreator
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" >
+            
+                <span>
+            
+                    
+                    (tbd) sideEffectProcessor
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    (tbd) createReducer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" >
+            
+                <span>
+            
+                    
+                    (tbd) createMetaReducer
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    (tbd) composeReducers
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" >
+            
+                <span>
+            
+                    
+                    (tbd) Action Enhancers
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" >
+            
+                <span>
+            
+                    
+                    (tbd) Reducer Helpers
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../WritingEnhancers.html">
+            
+                <a href="../WritingEnhancers.html">
+            
+                    
+                    Writing enhancers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Babel plugins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../BabelAutotype.html">
+            
+                <a href="../BabelAutotype.html">
+            
+                    
+                    Auto-generated actionCreator type
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Action Creator</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="action-creator">Action Creator</h1>
+<p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x438;&#x437;&#x431;&#x435;&#x436;&#x430;&#x442;&#x44C; &#x43F;&#x443;&#x442;&#x430;&#x43D;&#x438;&#x446;&#x44B; &#x441;&#x440;&#x430;&#x437;&#x443; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x43C;:</p>
+<ul>
+<li><code class="language-">actionCreator</code> - &#x444;&#x430;&#x431;&#x440;&#x438;&#x43A;&#x430; &#x434;&#x43B;&#x44F; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x44F; action creator&apos;&#x43E;&#x432;</li>
+<li><strong>ActionCreator</strong> - &#x441;&#x430;&#x43C; action creator, &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x43D;&#x430;&#x448;&#x435;&#x439; &#x444;&#x430;&#x431;&#x440;&#x438;&#x43A;&#x43E;&#x439;</li>
+</ul>
+<p>&#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x43F;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x438;&#x43C;, &#x43A;&#x430;&#x43A; &#x43E;&#x431;&#x44A;&#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x439; <strong>ActionCreator</strong>:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">import</span> actionCreator <span class="token keyword">from</span> <span class="token template-string"><span class="token string">`borex-actions/actionCreator`</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> creator <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x422;&#x435;&#x43F;&#x435;&#x440;&#x44C; &#x43F;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x438;&#x43C; &#x43D;&#x430; <code class="language-">action</code>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D; &#x43D;&#x430;&#x448;&#x438;&#x43C; <strong>ActionCreator</strong>:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;ACTION#0&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> undefined<span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><code class="language-">action</code> &#x43F;&#x440;&#x438;&#x434;&#x435;&#x440;&#x436;&#x438;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; <a href="https://github.com/acdlite/flux-standard-action" target="_blank">FSA</a> &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x430;. &#x41C;&#x43E;&#x436;&#x43D;&#x43E; &#x437;&#x430;&#x43C;&#x435;&#x442;&#x438;&#x442;&#x44C;, &#x447;&#x442;&#x43E; <code class="language-">type</code> &#x443;&#x436;&#x435; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x451;&#x43D;, <code class="language-">payload</code> - <code class="language-">undefined</code>, <code class="language-">error</code> &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D; &#x432; <code class="language-">false</code>, &#x430; &#x432; <code class="language-">meta</code> &#x43B;&#x435;&#x436;&#x438;&#x442; &#x43C;&#x430;&#x441;&#x441;&#x438;&#x432; <code class="language-">creatorArgs</code> (&#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x44B;, &#x441; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x43C;&#x438; &#x431;&#x44B;&#x43B; &#x432;&#x44B;&#x437;&#x432;&#x430;&#x43D; <strong>ActionCreator</strong>). &#x422;&#x435;&#x43F;&#x435;&#x440;&#x44C; &#x43F;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x438;&#x43C;, &#x43A;&#x430;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x44F;&#x442;&#x44C; &#x432;&#x441;&#x435;&#x43C; &#x44D;&#x442;&#x438;&#x43C;.</p>
+<h2 id="payload">Payload</h2>
+<p>&#x41F;&#x43E;-&#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E;, <code class="language-">payload</code> - &#x44D;&#x442;&#x43E; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x438; &#x43D;&#x430;&#x448;&#x435;&#x433;&#x43E; <strong>ActionCreator</strong>&apos;&#x430;:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token string">&apos;payload&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;ACTION#0&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> <span class="token string">&apos;payload&apos;</span><span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;payload&apos;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x41E;&#x441;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x44B; &#x43D;&#x435; &#x43F;&#x43E;&#x432;&#x43B;&#x438;&#x44F;&#x44E;&#x442; &#x43D;&#x430; <code class="language-">payload</code>, &#x43B;&#x438;&#x448;&#x44C; &#x431;&#x443;&#x434;&#x443;&#x442; &#x432;&#x438;&#x434;&#x43D;&#x44B; &#x432; <code class="language-">creatorArgs</code>:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token string">&apos;payload&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;another&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;ACTION#0&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> <span class="token string">&apos;payload&apos;</span><span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;payload&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;another&apos;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="error">Error</h2>
+<p>&#x415;&#x441;&#x43B;&#x438; <code class="language-">payload</code> &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x43E;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; <code class="language-">Error</code>, &#x442;&#x43E; <strong>ActionCreator</strong> &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x438; &#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442; <code class="language-">error</code> &#x432; <code class="language-">true</code>:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&apos;error&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;ACTION#0&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> <span class="token operator">&lt;</span>Error<span class="token punctuation">:</span> error<span class="token operator">&gt;</span><span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token operator">&lt;</span>Error<span class="token punctuation">:</span> error<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="type">Type</h2>
+<p>&#x41F;&#x43E;-&#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E;, &#x43A;&#x430;&#x436;&#x434;&#x44B;&#x439; <strong>ActionCreator</strong> &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x430;&#x435;&#x442; &#x443;&#x43D;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; <code class="language-">type</code>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D; <code class="language-">actionCreator</code>&apos;&#x43E;&#x43C;&apos;.</p>
+<p>&#x415;&#x441;&#x442;&#x44C; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x437;&#x430;&#x434;&#x430;&#x442;&#x44C; <code class="language-">type</code> &#x432;&#x440;&#x443;&#x447;&#x43D;&#x443;&#x44E;. <code class="language-">actionCreator</code> &#x43F;&#x440;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x435;&#x442; &#x43E;&#x43F;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440; &#x442;&#x438;&#x43F;&#x430; <code class="language-">string</code> &#x438;&#x43B;&#x438; <code class="language-">symbol</code>:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">const</span> creator <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span><span class="token string">&apos;myAction&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;myAction&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> undefined<span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">const</span> creator <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span><span class="token function">Symbol</span><span class="token punctuation">(</span><span class="token string">&apos;myAction&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token function">Symbol</span><span class="token punctuation">(</span>myAction<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> undefined<span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="enhancers">Enhancers</h2>
+<p>&#x422;&#x430;&#x43A;&#x436;&#x435; &#x435;&#x441;&#x442;&#x44C; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x44F;&#x442;&#x44C; &#x433;&#x435;&#x43D;&#x435;&#x440;&#x430;&#x446;&#x438;&#x435;&#x439; <code class="language-">action</code>&apos;&#x43E;&#x432; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; enhancer &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x439;. &#x41E; &#x43D;&#x438;&#x445; &#x432; <a href="ActionEnhancers.html">&#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x435;&#x43C; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x435;</a>.</p>
+<h2 id="commandcreator">commandCreator</h2>
+<p>&#x421; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; <code class="language-">commandCreator</code> &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x432;&#x430;&#x442;&#x44C; action&apos;&#x44B;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x44E;&#x442; &#x43B;&#x438;&#x448;&#x44C; side-effect&apos;&#x44B; &#x438;&#x43B;&#x438; &#x442;&#x430;&#x43A; &#x43D;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x43C;&#x44B;&#x435; async-actions.</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">import</span> commandCreator <span class="token keyword">from</span> <span class="token string">&apos;borex-actions/commandCreator&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> creator <span class="token operator">=</span> <span class="token function">commandCreator</span><span class="token punctuation">(</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span> param<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> dispatch<span class="token punctuation">,</span> getState <span class="token punctuation">}</span> <span class="token operator">=</span> context<span class="token punctuation">;</span>
+
+  <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token function">someAction</span><span class="token punctuation">(</span>param<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">creator</span><span class="token punctuation">(</span><span class="token string">&apos;param&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span>action<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Will call function passed to `commandCreator`</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; action</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;ACTION#0&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> <span class="token string">&apos;param&apos;</span><span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;param&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    sideEffects<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token operator">&lt;</span>Function<span class="token operator">&gt;</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    sideEffectsOnly<span class="token punctuation">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x43F;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x435;&#x442;&#x44C; &#x43D;&#x430; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x435;&#x43D;&#x43D;&#x44B;&#x439; action, &#x442;&#x43E; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43F;&#x43E;&#x43D;&#x44F;&#x442;&#x44C;, &#x447;&#x442;&#x43E; <code class="language-">commandCreator</code> &#x44D;&#x442;&#x43E; &#x432;&#x441;&#x435;&#x433;&#x43E; &#x43B;&#x438;&#x448;&#x44C; alias:</p>
+<pre class="language-"><code class="lang-js language-"><span class="token keyword">function</span> <span class="token function">commandCreator</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span>
+    <span class="token function">withSideEffect</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">setMetaStatic</span><span class="token punctuation">(</span><span class="token string">&apos;sideEffectsOnly&apos;</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>&#x421;&#x43C;. &#x442;&#x430;&#x43A;&#x436;&#x435; <a href="SideEffects.html">Side-effects</a></p>
+</blockquote>
+<h2 id="&#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x435;-&#x438;&#x43C;&#x435;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435;-action&#x43E;&#x432;">&#x410;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x435; &#x438;&#x43C;&#x435;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x435; action&apos;&#x43E;&#x432;</h2>
+<p><code class="language-">borex</code> &#x43F;&#x440;&#x435;&#x434;&#x43B;&#x430;&#x433;&#x430;&#x435;&#x442; &#x43F;&#x43B;&#x430;&#x433;&#x438;&#x43D; &#x434;&#x43B;&#x44F; babel <code class="language-">babel-plugin-borex-autotype</code>. &#x41E;&#x43D; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x44F;&#x435;&#x442; &#x438;&#x43C;&#x44F;, &#x43F;&#x43E;&#x434; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x43C; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x451;&#x442;&#x441;&#x44F; <code class="language-">actionCreator</code> &#x438; &#x43F;&#x43E;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x435;&#x433;&#x43E; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x43C; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x43C;.</p>
+<pre class="language-"><code class="lang-js language-"><span class="token comment" spellcheck="true">// counter.js</span>
+<span class="token keyword">import</span> actionCreator <span class="token keyword">from</span> <span class="token string">&apos;borex-actions/actionCreator&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> increment <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> decrement <span class="token operator">=</span> <span class="token function">actionCreator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> incAction <span class="token operator">=</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> decAction <span class="token operator">=</span> <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; incAction</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;counter/increment&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> undefined<span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442; decAction</span>
+<span class="token punctuation">{</span>
+  type<span class="token punctuation">:</span> <span class="token string">&apos;counter/decrement&apos;</span><span class="token punctuation">,</span>
+  payload<span class="token punctuation">:</span> undefined<span class="token punctuation">,</span>
+  error<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  meta<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    creatorArgs<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x41F;&#x43E;&#x434;&#x440;&#x43E;&#x431;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x43D;&#x430; <a href="../BabelAutotype.html">&#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x435; &#x43F;&#x43B;&#x430;&#x433;&#x438;&#x43D;&#x430;</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="ActionEnhancers.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Action Enhancers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Action Creator","level":"1.2.1","depth":2,"next":{"title":"Action Enhancers","level":"1.2.2","depth":2,"path":"docs/overview/ActionEnhancers.md","ref":"docs/overview/ActionEnhancers.md","articles":[]},"previous":{"title":"Overview","level":"1.2","depth":1,"ref":"","articles":[{"title":"Action Creator","level":"1.2.1","depth":2,"path":"docs/overview/ActionCreator.md","ref":"docs/overview/ActionCreator.md","articles":[]},{"title":"Action Enhancers","level":"1.2.2","depth":2,"path":"docs/overview/ActionEnhancers.md","ref":"docs/overview/ActionEnhancers.md","articles":[]},{"title":"Side-effects","level":"1.2.3","depth":2,"path":"docs/overview/SideEffects.md","ref":"docs/overview/SideEffects.md","articles":[]},{"title":"Self-reducing Actions","level":"1.2.4","depth":2,"path":"docs/overview/SelfReducingActions.md","ref":"docs/overview/SelfReducingActions.md","articles":[]},{"title":"Reducer Creator","level":"1.2.5","depth":2,"path":"docs/overview/ReudcerCreator.md","ref":"docs/overview/ReudcerCreator.md","articles":[]},{"title":"Reducer Helpers","level":"1.2.6","depth":2,"path":"docs/overview/ReducerHelpers.md","ref":"docs/overview/ReducerHelpers.md","articles":[]},{"title":"*In Reducers","level":"1.2.7","depth":2,"path":"docs/overview/InReducers.md","ref":"docs/overview/InReducers.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","github","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/kastigar/borex/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/kastigar/borex/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Borex","gitbook":">=3.2.1"},"file":{"path":"docs/overview/ActionCreator.md","mtime":"2016-11-19T13:25:10.075Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-11-23T09:56:19.204Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

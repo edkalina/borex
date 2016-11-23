@@ -1,0 +1,88 @@
+exports[`Types should be generated correctly in assignment.js 1`] = `
+"const actionCreator = function actionCreator() {};
+
+const creator1 = actionCreator(\"assignment/creator1\");
+let creator2 = actionCreator(\"assignment/creator2\");
+var creator3 = actionCreator(\"assignment/creator3\");
+
+const { creator4 = actionCreator(\"assignment/creator4\") } = {};
+let { creator5 = actionCreator(\"assignment/creator5\") } = {};
+var { creator6 = actionCreator(\"assignment/creator6\") } = {};
+
+let creator7;
+creator7 = actionCreator(\"assignment/creator7\");
+
+var creator8;
+creator8 = actionCreator(\"assignment/creator8\");
+
+function foo(creator9 = actionCreator(\"assignment/creator9\")) {}"
+`;
+
+exports[`Types should be generated correctly in declareInClass.js 1`] = `
+"const actionCreator = function actionCreator() {};
+
+export default class Cls {
+  static staticProp = actionCreator(\"declareInClass/staticProp\");
+
+  classProp = actionCreator(\"declareInClass/classProp\");
+}"
+`;
+
+exports[`Types should be generated correctly in declareInObject.js 1`] = `
+"const actionCreator = function actionCreator() {};
+
+const someObj = {
+  idProp: actionCreator(\'declareInObject/idProp\'),
+  \'strProp\': actionCreator(\'declareInObject/strProp\'),
+  [dynProp]: actionCreator()
+};"
+`;
+
+exports[`Types should be generated correctly in exportByName.js 1`] = `
+"const actionCreator = function actionCreator() {};
+
+export const creator1 = actionCreator(\"exportByName/creator1\");
+export let creator2 = actionCreator(\"exportByName/creator2\");
+export var creator3 = actionCreator(\"exportByName/creator3\");"
+`;
+
+exports[`Types should be generated correctly in exportDefault.js 1`] = `
+"const actionCreator = function actionCreator() {};
+
+export default actionCreator(\"exportDefault\");"
+`;
+
+exports[`Types should be generated correctly in ignored.js 1`] = `
+"function actionCreator() {};
+function wrap() {}
+
+wrap(actionCreator());
+
+smth += actionCreator();"
+`;
+
+exports[`Types should be generated correctly in propAssignment.js 1`] = `
+"const actionCreator = function actionCreator() {};
+const dynProp = \'dynProp\';
+
+const obj = { inner: {} };
+
+obj.creatorAsProp = actionCreator(\'propAssignment/creatorAsProp\');
+obj[dynProp] = actionCreator();
+obj[\'strProp\'] = actionCreator(\'propAssignment/strProp\');
+
+obj.inner.creatorAsProp = actionCreator(\'propAssignment/creatorAsProp\');
+obj.inner[dynProp] = actionCreator();
+obj.inner[\'strProp\'] = actionCreator(\'propAssignment/strProp\');"
+`;
+
+exports[`Types should be generated correctly in skipNamed.js 1`] = `
+"const actionCreator = function actionCreator() {};
+const enhancer = function enhancer() {};
+
+const creator1 = actionCreator(\'named\', enhancer);
+const creator2 = actionCreator(Symbol(\'named\'), enhancer);
+const creator3 = actionCreator(\'skipNamed/creator3\', enhancer(), enhancer);"
+`;
+
+exports[`Types should be generated correctly in string transformation 1`] = `"const creator = actionCreator(\"unknown/creator\");"`;
