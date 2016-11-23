@@ -6,6 +6,17 @@ Learn it by [Documentation](http://kastigar.github.io/borex/) (sorry, it is stil
 
 Also check rewritten [counter example](https://github.com/kastigar/borex/commit/71df7a3a86300723dd7cbdd70cbb28d308bf574b?diff=split) and another [remake](https://github.com/kastigar/borex/commit/22dc3af6c1f887b478131ef00c6ab0abbd52e90d?diff=split) with self-reducing actions. The same for [TodoMVC example](https://github.com/kastigar/borex/commit/896d842435373b35706bf9ef80f393c98eec63b3?diff=split) ([remake](https://github.com/kastigar/borex/commit/8a941bce10e30761ef4adf1fe95c4a484b1b518a?diff=split) with self-reducing actions).
 
+## Key features
+
+* Write less code with [redux](http://redux.js.org/)
+* FSA compliant actions
+* Fat action creators (with action enhancers)
+* Self-reducing actions
+* Easy data manipulation in reducers (with reducer helpers)
+* Simple side-effects
+* Extendable: create your own enhancers and helpers
+* Flexible: use it any way you like
+
 ## Action helper
 
 ```
@@ -54,12 +65,12 @@ import appendIn from 'borex-reducers/appendIn';
 
 import { increment, decrement, addItem } from './actions';
 
-const counterReducer = createReducerIn('counter', (on) => {
+const counterReducer = createReducerIn('counter', on => {
   on(increment, counter => counter + 1);
   on(decrement, counter => counter - 1);
 });
 
-const dataReducer = createReducer((on) => {
+const dataReducer = createReducer(on => {
   on(addItem, appendIn('data.list', data => { ...data, createdAt: Date.now() }));
 });
 
@@ -97,6 +108,7 @@ const increment = actionCreator('counter/increment');
 ```
 
 Check [plugin documentation page](https://kastigar.github.io/borex/docs/BabelAutotype.html) for more details.
+
 
 ## Name and logo
 
